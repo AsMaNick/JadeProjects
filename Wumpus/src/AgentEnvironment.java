@@ -200,6 +200,8 @@ public class AgentEnvironment extends Agent {
         static final String WUMPUS_SERVICE_DESCRIPTION = "wumpus_world";
         static final String NAVIGATOR_SERVICE_DESCRIPTION = "navigator";
         static final String NAVIGATOR_AGENT_TYPE = "navigator_agent";
+        static final String WUMPUS_WORLD_DIGGER_CONVERSATION_ID = "digger_conv_id";
+        static final String NAVIGATOR_DIGGER_CONVERSATION_ID = "navigator_conv_id";
         static final String INITIAL_WUMPUS_CAVE = ". . . P W G . . . . . . S . P . ";
         static final String OK_MESSAGE = "OK";
         static final String FAIL_MESSAGE = "FAIL";
