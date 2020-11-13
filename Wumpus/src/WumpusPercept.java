@@ -19,11 +19,11 @@
  * @author Ruediger Lunde
  */
 public class WumpusPercept {
-	private boolean stench;
-	private boolean breeze;
-	private boolean glitter;
-	private boolean bump;
-	private boolean scream;
+	private boolean stench = false;
+	private boolean breeze = false;
+	private boolean glitter = false;
+	private boolean bump = false;
+	private boolean scream = false;
 
 	public WumpusPercept setStench() {
 		stench = true;

@@ -169,8 +169,7 @@ public class WumpusCave {
 		return allowedRooms;
 	}
 
-	@Override
-	public String toString() {
+	public String toStringWithStart(Position start, boolean isGoldGrabbed) {
 		StringBuilder builder = new StringBuilder();
 		for (int y = caveYDimension; y >= 1; y--) {
 			for (int x = 1; x <= caveXDimension; x++) {
@@ -178,7 +177,7 @@ public class WumpusCave {
 				String txt = "";
 				if (r.equals(start.getRoom()))
 					txt += "S";
-				if (r.equals(gold))
+				if ((!isGoldGrabbed && r.equals(gold)) || (isGoldGrabbed && r.equals(start.getRoom())))
 					txt += "G";
 				if (r.equals(wumpus))
 					txt += "W";
@@ -196,5 +195,10 @@ public class WumpusCave {
 			builder.append("\n");
 		}
 		return builder.toString();
+	}
+	
+	@Override
+	public String toString() {
+		return toStringWithStart(start, false);
 	}
 }
